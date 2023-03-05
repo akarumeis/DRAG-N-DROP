@@ -61,20 +61,20 @@ function dropDrag(event) {
     draggeble.innerHTML = droppedHTML
     dropTarget.innerHTML = draggedHTML
 }
-//  Получаем все елементы с калсса language
+// Получаем все елементы с классом language
 let listBlocks = document.querySelectorAll('.language');
-    // Перебираем список елементов
+    // Перебираем список блоков с классом 'language'
 for ( let block of listBlocks ) {
-    //  
+    // Добавляем проверку события "dragstart" с вызовом функции startDrag
     block.addEventListener('dragstart', startDrag);
-    //
+    // Добавляем проверку события "dragend" с вызовом функции endDrag
     block.addEventListener('dragend', endDrag);
-    //
+    // Добавляем проверку события "dragover" с вызовом функции overDrag
     block.addEventListener('dragover', overDrag);
-    //
+    // Добавляем проверку события "dragleave" с вызовом функции leaveDrag
     block.addEventListener('dragleave', leaveDrag);
-    //
+    // Добавляем проверку события "drop" с вызовом функции dropDrag
     block.addEventListener('drop', dropDrag);
-    //
+    // Добавляем проверку события "dragenter" с вызовом функции enterDrag
     block.addEventListener('dragenter', enterDrag);
 }
